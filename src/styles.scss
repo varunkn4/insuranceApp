@@ -1,0 +1,103 @@
+@import './layout/Main';
+
+@import './pages/login/Login';
+@import './pages/home/Home';
+
+@import './containers/statBar/StatBar';
+@import './containers/customerProfile/CustomerProfile';
+@import './containers/claimForm/ClaimForm';
+
+*{
+    font-family: 'Karla', sans-serif;
+}
+body{
+    background-color: #EDEAE5 !important;
+    //background-blend-mode: saturation;
+    overflow: auto;
+}
+.wrapper{
+    position: relative;
+}
+.centered{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.left{
+    text-align: left;
+}
+.pull-right{
+    float: right;
+}
+.pull-left{
+    float: left;
+}
+.hidden{
+    display: none !important;
+}
+.visible{
+    display: initial !important;
+}
+.block{
+    display: block !important;
+}
+.invisible{
+    visibility: hidden !important;
+}
+.fixed{    
+    position: fixed !important;
+}
+.pointer{
+    cursor: pointer;
+}
+.not-allowed{
+    cursor: not-allowed;
+}
+.borderless{
+    border: none !important;
+}
+.autoHeight{
+    height: auto !important;
+}
+.height-100{
+    height: 100%;
+}
+.width-100{
+    width: 100%;
+}
+.header{
+    background: #17252a;
+    border-bottom: 2px solid #3aafa9;
+    .title{
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 5px 0 0 10px;
+    }
+    .actionItems{
+        i{
+            color: white;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    }
+}
+
+.underlay{
+    z-index: 99999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    width: 100vw;
+    height: 100vh;
+    .closePopUpIcon{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-weight: bold;
+        color: #ffffff;
+        cursor: pointer;
+    }    
+}

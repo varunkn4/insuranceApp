@@ -1,0 +1,142 @@
+.customerInfo{    
+    height: 100%;
+    overflow-y: auto; 
+    .profilePicture{
+        height: 75px;
+        margin: auto;
+        text-align: center;
+        img{
+            height: 100%;
+        }        
+    }
+    .basicInfo{
+        width: 100%;  
+        padding-top: 10px;
+        .infoHeader{
+            .infoValue{
+                color: #3aafa9;
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 0;
+            }
+        }       
+        .infoDialog{
+            .infoTitle{
+                color: #3aafa9;
+                font-size: 14px;
+                font-weight: bold;
+                margin-bottom: 0;
+            }
+            .infoValue{
+                color: #838383;
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 0;
+            }
+        } 
+        .claimHistory{
+            margin-top: 15px;
+            padding: 0 10px;
+            width: 100%;
+            .historyTitle{
+                color: #3aafa9;
+                font-weight: bold;
+            }
+            .claimSummary{
+                .summaryItem{
+                    border: 1px solid #FFFFFF;
+                    border-radius: 10px;
+                    text-align: center;
+                    .summaryTitle{
+                        font-size: 13px;
+                        color: #17252a;
+                        font-weight: bold;
+                    }
+                    .summaryValue{
+                        font-size: 13px;
+                        color: #17252a;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .claimBox{
+                border: 1px solid white;
+                border-radius: 10px;
+                label{
+                    margin-bottom: 5px;
+                }
+                .claimBoxTitle{
+                    .claimBoxTitleLabel{
+                        font-size: 16px;
+                        color: #838383;
+                        font-weight: bold;
+                    }
+                    .claimBoxTitleValue{
+                        font-size: 16px;
+                        color: #3aafa9;
+                        font-weight: bold;
+                    }
+                }
+                .claimBoxContent{
+                    .claimBoxContentLabel{
+                        font-size: 14px;
+                        color: #838383;
+                        font-weight: bold;
+                    }
+                    .claimBoxContentValue{
+                        font-size: 14px;
+                        color: #3aafa9;
+                        font-weight: bold;
+                        &.accepted{
+                            color: #8aff9e;
+                        }
+                        &.pending{
+                            color: #f7e710;
+                        }
+                    }
+                }
+            }
+            .prevClaimsButton{
+                font-weight: bold;
+                color: #c4c4c4;
+            }
+            .pagination{
+                margin-bottom: 0;
+                .page-item{
+                    .page-link{
+                        padding: 5px;
+                        color: #838383;   
+                        font-size: 12px;                                            
+                    }
+                    &.active{                        
+                        .page-link{
+                            padding: 5px;
+                            background: #3aafa9;
+                            color: #FFFFFF;
+                            border-color: #3aafa9;
+                        }
+                    }
+                    :focus {
+                        box-shadow: none !important;
+                    } 
+                }
+            }
+        }
+        .otherVehicleTable{
+            color: #838383;
+            font-style: italic;
+            font-size: 14px;
+            font-weight: bold;
+            td{
+                padding: 5px 15px !important;
+            }
+        }
+        .otherVehicleTable_header{
+            padding: 5px 15px !important;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #505050;
+        }
+    }
+}

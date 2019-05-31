@@ -1,0 +1,300 @@
+.viewableArea{
+    height: 100%;  
+    .mainArea{  
+        height: 100%;   
+        .viewRow{
+            padding: 10px 0;            
+        }  
+        .userBar{
+            .avatar{
+                height: 50px;
+                img{
+                    height: 100%;
+                }
+            }
+            .userLogin{
+                margin-left: 10px;
+                .userName{
+                    color: #838383;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                    .name{
+                        color: #2b7a78;
+                        font-weight: bold;
+                    }
+                }
+            }
+            &.barExpanded{
+                .userLogin{
+                    .lastLogin{
+                        color: #4d4d4d;
+                        font-style: italic;
+                        font-size: 12px;
+                        margin-bottom: 0;
+                        .loginDetails{
+                            color: #2b7a78;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .logoutButton{
+                    background: #f57167;
+                    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+                    border-radius: 5px;
+                    margin: 10px 0 0 5px;
+                    height: 30px;
+                    padding: 0;
+                    width: 30px;
+                    text-align: center;
+                    i{
+                        color: white;
+                        font-size: 12px;
+                    }
+                    &:hover{
+                        background: #ce483f;
+                    }
+                }
+            }
+            &.barMinimised{
+                .userLogin{
+                    .lastLogin{
+                        display: none;
+                    }
+                }
+                .homeButons{
+                    margin-top: 0;
+                    font-size: 12px;
+                    height: 20px;                                  
+                }
+                .avatar {
+                    height: 24px;
+                }
+                .logoutButton{
+                    background: #f57167;
+                    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+                    border-radius: 5px;
+                    margin: 0 0 0 5px;
+                    height: 20px;
+                    padding: 0;
+                    width: 30px;
+                    text-align: center;
+                    line-height: 0;
+                    i{
+                        color: white;
+                        font-size: 10px;
+                    }
+                    &:hover{
+                        background: #ce483f;
+                    }
+                }
+            }
+        }
+        .cardContainer{
+            background: #ffffff;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+            padding: 5px 10px;
+            border: solid #cecece;
+            border-width: 1px 1px 1px 1px;
+            .customerInfo{
+                height: calc(100vh - 75px - 50px - 40px);
+            }
+        } 
+        .addNew{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            button{
+                &:focus{
+                    outline: none;
+                }
+            }
+            .addIcon{
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+            }
+        }
+        .homeButons{
+            background: #3aafa9;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12); 
+            margin-top: 10px;
+            font-size: 14px;
+            height: 30px;
+            padding: 0 20px;
+            &.processClaim{
+                background: #2b7a78;
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+            }
+            &.activeNo{                    
+                color: white;
+                background: #EDEAE5;
+                height: 15px;
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+            &.activeYes{
+                //border: 1px solid #2b7a78;
+                color: #010329;
+                background: #3aafa9;
+                height: 15px;
+                &:focus{
+                    box-shadow: none;
+                }
+            } 
+            &:hover{
+                background: #2b7a78;
+            }                
+        }
+        .searchPolicy{
+            width: 100%;
+            margin-top: 10px;
+            .btn-group{
+                border: 1px solid #3aafa9;
+                border-radius: 7px;
+                margin: 5px 10px 0;
+            }
+            .searchBox{
+                .searchInput{
+                    width: 100%;
+                    background: none;
+                    border: 1px solid;
+                    height: 30px;
+                    border-color: rgba(0, 0, 0, 0.23);
+                    padding: 0 10px;
+                    color: #2b7a78;
+                    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12); 
+                    &:focus{
+                        background: white;
+                        outline: initial;
+                    }
+                }
+            }            
+            
+        }        
+    }
+    .viewClaimsHistory{
+        width: 80vw;       
+        margin: 6% auto 0;
+        background: #ffffff;
+        padding: 5px;
+        position: relative;
+        .popUpHeader{
+            background: #17252a;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+        .claimTable{
+            width: 98%;
+            margin: 10px auto 20px;
+            height: 50vh;
+            overflow-y: auto;
+        }
+    }  
+    .requestPolicy{
+        padding: 5px;
+        width: 50vw;
+        margin: 10% auto 0;
+        background: #ffffff;
+        position: relative;
+        .popUpHeader{
+            background: #17252a;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+        .popUpBody{
+            height: auto;
+            border: 2px solid #cecece;
+            margin-bottom: 5px;
+            padding: 10px;
+            .subHeader{
+                color: #4d4d4d;
+                font-size: 16px;
+            }
+            .popUpSubmit{
+                min-width: 250px;
+                margin: 10px auto;
+                background:  #3aafa9;
+                border-radius: 5px;
+                color: white;
+                &:hover{
+                    background: #2b7a78;
+                }   
+            }
+            input{
+                padding: 10px;
+                color: #505050;
+                font-size: 14px;
+                font-weight: bold;
+                &:focus{
+                    border: inherit;
+                }
+            }
+        }
+    }  
+    .viewLogoutConfirmation, .viewSubmitConfirmation{
+        padding: 5px;
+        width: 40vw;
+        margin: 10% auto 0;
+        background: #ffffff;
+        position: relative;
+        .logoutPopup{
+            width: 100%;
+            .popUpHeader{
+                background: #17252a;
+                color: white;
+                font-weight: bold;
+                padding: 5px 10px;
+            }
+            .popUpBody{
+                width: 100%;
+                height: auto;
+                border: 2px solid #cecece;
+                margin-bottom: 5px;
+                padding: 10px;
+                .subHeader{
+                    color: #4d4d4d;
+                    font-size: 16px;
+                }
+                .popUpSubmit{
+                    min-width: 200px;
+                    margin: 10px auto;
+                    background:  #3aafa9;
+                    border-radius: 5px;
+                    color: white;
+                    &:hover{
+                        background: #2b7a78;
+                    }
+                    &.cancel{
+                        background:  #f57167;
+                        &:hover{
+                            background: #ce483f;
+                        }
+                    }   
+                }
+                
+            }
+        }
+    }
+    .viewSubmitConfirmation{
+        .popUpBody{
+            text-align: center;
+            i{
+                margin-top: 15px;
+                color: #43a047;
+                font-size: 40px;
+            }
+            .subHeader{
+                font-weight: bold;
+                font-style: italic;
+                margin-top: 10px;
+            }
+        }
+    }
+}

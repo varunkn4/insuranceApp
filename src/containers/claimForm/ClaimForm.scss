@@ -1,0 +1,200 @@
+.mainForm{
+    height: 100%;
+    padding: 5px 10px;
+    .formButton{
+        float: right;
+        margin: 10px 0 0 0;
+    }
+    .formTitle{
+        padding-top: 10px;
+        h5{
+            color: #838383;
+            font-weight: bold;
+        }
+        .switch{
+            text-align: right;
+            margin-top: 2px;
+            .switchLabelMain{
+                color: #505050 !important;
+            }
+            .switchLabel{
+                font-size: 16px;
+                color: #838383;
+                font-style: italic;
+                margin-bottom: 5px;
+                font-weight: bold;                
+            }
+            .help{
+                font-size: 14px;
+                color: #cecece;
+                margin-left: 10px;
+            }
+            .MuiSwitch-switchBase-7, .MuiSwitch-switchBase-8{
+                height: auto;
+            }
+            
+        }
+    }
+    .newForm{
+        // border: 1px solid #3aafa9;
+        border: 1px solid #cecece;
+        padding: 10px 15px;
+        overflow-y: auto;
+        .questionnaireBox{
+            border-left: 5px solid #3aafa9;
+            min-height: 60px;
+            margin-bottom: 15px;
+            padding: 2px 5px 10px 15px;
+            .questionnaire{
+                color: #505050;
+                font-size: 18px;
+                //font-style: italic;                
+            }
+            .passengerNumber{
+                width: 100%;
+                border: 1px solid #2b7a78;
+                border-radius: 5px;
+                padding: 5px 10px;
+                height: 34px;
+                color: #505050;
+                font-size: 14px;
+                font-style: italic;
+            }
+            .activeNo{
+                border: 1px solid #2b7a78;
+                color: #505050;
+                font-size: 14px;
+                font-style: italic;
+                box-shadow: none;
+                padding: 5px 10px;
+                height: 34px;
+            }
+            .activeYes{
+                background: #2b7a78;
+                color: white;
+                font-size: 14px;
+                font-style: italic;
+                box-shadow: none;
+                padding: 5px 10px;
+                height: 34px;
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+            .react-datepicker-wrapper{
+                width: 100%;
+                .react-datepicker__input-container{
+                    width: 100%;
+                    .datePicker,.timePicker{
+                        width: 100%;
+                        border: 1px solid #2b7a78;
+                        border-radius: 5px;
+                        padding: 2px 5px;
+                        color: #505050;
+                        font-style: italic;
+                        font-size: 14px;
+                        height: 34px;
+                    }                    
+                }
+            }
+            .react-datepicker-popper{
+                width: 320px;
+                .react-datepicker--time-only{
+                    width: 100%;
+                    .react-datepicker__time-container {
+                        width: 100%;
+                        .react-datepicker__time-box{
+                            width: 100%;
+                            .react-datepicker__time-list{
+                                width: 100%;
+                            }
+                        }
+                    }                    
+                }
+            }
+            .dropdown{
+                .dropdownControl__control{
+                    border: 1px solid #2b7a78;
+                    border-radius: 5px;                
+                    .dropdownControl__dropdown-indicator{
+                        padding: 0 !important;
+                    }
+                    .dropdownControl__value-container{
+                        padding: 0 5px !important;
+                        .dropdownControl__single-value{
+                            color: #505050;
+                            font-style: italic;
+                            font-size: 14px;
+                            width: 100%; 
+                        }
+                    }               
+                }
+                &.focus{
+                    box-shadow: none !important; 
+                }
+            }
+        }
+    } 
+    .submissionButtons{
+        width: 100%;
+        text-align: center;
+        button{
+            cursor: pointer;
+            background: #3aafa9;
+            width: 300px;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            &:hover{
+                background: #2b7a78;
+            }
+        }
+    }
+    .formNavigation{
+        position: absolute;
+        bottom: 30px;
+        right: 50px;
+        .navButton{
+            border-radius: 50%;
+            height: 55px;
+            width: 55px;
+            background: #2b7a78;
+            text-align: center;
+            color: white;
+            font-weight: bold; 
+            border: none;
+            font-size: 25px;
+            margin-left: 5px;
+            &:focus{
+                border: none;
+                outline: none;
+                box-shadow: none;
+            }
+            &.disabled{
+                background: rgb(175, 175, 175);
+                color: rgb(201, 201, 201);
+                cursor: not-allowed;
+            }
+        }
+    }   
+}
+
+.snackBar{
+    .snackBarFraud{
+        &>div{
+            background: #d32f2f !important;
+        }
+    }
+    .snackBarValid{
+        &>div{
+            background: #43a047 !important;
+        }
+    }
+    .closeIcon{
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
