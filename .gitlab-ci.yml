@@ -1,0 +1,101 @@
+image: docker
+services:
+    - docker:dind
+
+stages:
+    - build
+    - test
+    - deploy
+before_script:
+     - ''
+variables:
+  CONTAINER_FE_DEV_IMAGE: code.suyatitech.com:4567/mekanate.org/claim-processing/front-end/front-end:dev
+  CONTAINER_FE_RELEASE_IMAGE: code.suyatitech.com:4567/mekanate.org/claim-processing/front-end/front-end:latest
+build:
+    stage: build
+    only:
+        - develop
+        - master
+        - devops
+    script:
+        - sudo docker build -t $CONTAINER_FE_DEV_IMAGE .
+        - sudo docker push  $CONTAINER_FE_DEV_IMAGE
+    tags:
+        - devbuild
+release-image:
+    stage: build
+    only:
+      - develop
+      - master
+      - devops
+    script:
+      - sudo docker tag $CONTAINER_FE_DEV_IMAGE $CONTAINER_FE_RELEASE_IMAGE
+      - sudo docker push $CONTAINER_FE_RELEASE_IMAGE
+    tags:
+      - devbuild
+test:
+    before_script:
+        - ''
+    stage: test
+    only:
+        - develop
+        - master
+        - devops
+    script:
+        - echo run tests 
+    tags:
+        - devbuild
+step-deploy-devops:
+    before_script:
+        - ''
+    variables:
+        tag: $CI_COMMIT_SHORT_SHA
+    stage: deploy
+    
+    only:
+        - devops
+    script:
+     - echo $tag
+     - echo $CI_COMMIT_SHORT_SHA
+     - echo $CI_BUILD_REF_NAME
+     - curl -X POST  -F token=e9fb5003a78fa46ed014a6737aace7  -F ref=devops  https://code.suyatitech.com/api/v4/projects/376/trigger/pipeline
+
+    tags:
+        - devops
+
+
+step-deploy-prod:
+    before_script:
+        - ''
+    variables:
+        tag: $CI_COMMIT_SHORT_SHA
+    stage: deploy
+    
+    only:
+        - master
+    script:
+     - echo $tag
+     - echo $CI_COMMIT_SHORT_SHA
+     - curl -X POST  -F token=e9fb5003a78fa46ed014a6737aace7  -F ref=master https://code.suyatitech.com/api/v4/projects/376/trigger/pipeline
+
+    environment: production
+    tags:
+        - prod
+   
+
+step-deploy-dev:
+    before_script:
+        - ''
+    stage: deploy
+    variables:
+        tag: $CI_COMMIT_SHORT_SHA
+    only:
+      - develop
+    script:
+     - echo $tag
+     - echo $CI_COMMIT_SHORT_SHA
+     - curl -X POST  -F token=e9fb5003a78fa46ed014a6737aace7  -F ref=develop  https://code.suyatitech.com/api/v4/projects/376/trigger/pipeline
+
+    environment: develop
+    tags:
+        - develop

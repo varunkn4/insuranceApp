@@ -1,0 +1,15 @@
+3aafa9 - light blue
+
+2b7a78 - dark blue
+
+010329
+
+17252a
+
+838383 - grey
+
+505050 - dark grey
+
+.MuiSwitch-switchBase-40
+
+<input type="text" className="searchInput" name="" id=""/>

@@ -1,0 +1,842 @@
+.header {
+  height: 40px;
+}
+.header .title {
+  cursor: pointer;
+}
+
+.content {
+  height: calc(100vh);
+}
+
+.loginWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: hard-light;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.loginWrapper .logoContainer {
+  background-size: cover;
+  background-blend-mode: color;
+  width: 30vw;
+  margin: auto;
+  height: 100vh;
+  padding-top: 18%;
+}
+.loginWrapper .logoContainer img {
+  width: 40%;
+}
+.loginWrapper .logoContainer .loginLogo h4 {
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+}
+.loginWrapper .loginCredentials {
+  margin: auto;
+  width: 70%;
+  font-size: 16px;
+}
+.loginWrapper .loginCredentials form .form-group:focus {
+  outline: none !important;
+}
+.loginWrapper .loginCredentials form .form-group input {
+  color: #ffffff;
+  background: none;
+  font-style: italic;
+  font-size: 14px;
+  height: 30px;
+  text-align: center;
+  border-width: 0 0 1px 0;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.loginWrapper .loginCredentials form .form-group input:focus {
+  box-shadow: none;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.loginWrapper .loginCredentials form button {
+  background: linear-gradient(to right, #4d4771, #583152);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  height: 30px;
+  padding: 0;
+  width: 100%;
+}
+.loginWrapper .loginCredentials form button:focus {
+  box-shadow: none;
+}
+
+.backgroundImage {
+  position: absolute;
+  background-color: black;
+  background-blend-mode: color;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+}
+.backgroundImage img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+
+.viewableArea {
+  height: 100%;
+}
+.viewableArea .mainArea {
+  height: 100%;
+}
+.viewableArea .mainArea .viewRow {
+  padding: 10px 0;
+}
+.viewableArea .mainArea .userBar .avatar {
+  height: 50px;
+}
+.viewableArea .mainArea .userBar .avatar img {
+  height: 100%;
+}
+.viewableArea .mainArea .userBar .userLogin {
+  margin-left: 10px;
+}
+.viewableArea .mainArea .userBar .userLogin .userName {
+  color: #838383;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.viewableArea .mainArea .userBar .userLogin .userName .name {
+  color: #2b7a78;
+  font-weight: bold;
+}
+.viewableArea .mainArea .userBar.barExpanded .userLogin .lastLogin {
+  color: #4d4d4d;
+  font-style: italic;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.viewableArea .mainArea .userBar.barExpanded .userLogin .lastLogin .loginDetails {
+  color: #2b7a78;
+  font-weight: bold;
+}
+.viewableArea .mainArea .userBar.barExpanded .logoutButton {
+  background: #f57167;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  margin: 10px 0 0 5px;
+  height: 30px;
+  padding: 0;
+  width: 30px;
+  text-align: center;
+}
+.viewableArea .mainArea .userBar.barExpanded .logoutButton i {
+  color: white;
+  font-size: 12px;
+}
+.viewableArea .mainArea .userBar.barExpanded .logoutButton:hover {
+  background: #ce483f;
+}
+.viewableArea .mainArea .userBar.barMinimised .userLogin .lastLogin {
+  display: none;
+}
+.viewableArea .mainArea .userBar.barMinimised .homeButons {
+  margin-top: 0;
+  font-size: 12px;
+  height: 20px;
+}
+.viewableArea .mainArea .userBar.barMinimised .avatar {
+  height: 24px;
+}
+.viewableArea .mainArea .userBar.barMinimised .logoutButton {
+  background: #f57167;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  margin: 0 0 0 5px;
+  height: 20px;
+  padding: 0;
+  width: 30px;
+  text-align: center;
+  line-height: 0;
+}
+.viewableArea .mainArea .userBar.barMinimised .logoutButton i {
+  color: white;
+  font-size: 10px;
+}
+.viewableArea .mainArea .userBar.barMinimised .logoutButton:hover {
+  background: #ce483f;
+}
+.viewableArea .mainArea .cardContainer {
+  background: #ffffff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 5px 10px;
+  border: solid #cecece;
+  border-width: 1px 1px 1px 1px;
+}
+.viewableArea .mainArea .cardContainer .customerInfo {
+  height: calc(100vh - 75px - 50px - 40px);
+}
+.viewableArea .mainArea .addNew {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.viewableArea .mainArea .addNew button:focus {
+  outline: none;
+}
+.viewableArea .mainArea .addNew .addIcon {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.viewableArea .mainArea .homeButons {
+  background: #3aafa9;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  margin-top: 10px;
+  font-size: 14px;
+  height: 30px;
+  padding: 0 20px;
+}
+.viewableArea .mainArea .homeButons.processClaim {
+  background: #2b7a78;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.viewableArea .mainArea .homeButons.activeNo {
+  color: white;
+  background: #EDEAE5;
+  height: 15px;
+}
+.viewableArea .mainArea .homeButons.activeNo:focus {
+  box-shadow: none;
+}
+.viewableArea .mainArea .homeButons.activeYes {
+  color: #010329;
+  background: #3aafa9;
+  height: 15px;
+}
+.viewableArea .mainArea .homeButons.activeYes:focus {
+  box-shadow: none;
+}
+.viewableArea .mainArea .homeButons:hover {
+  background: #2b7a78;
+}
+.viewableArea .mainArea .searchPolicy {
+  width: 100%;
+  margin-top: 10px;
+}
+.viewableArea .mainArea .searchPolicy .btn-group {
+  border: 1px solid #3aafa9;
+  border-radius: 7px;
+  margin: 5px 10px 0;
+}
+.viewableArea .mainArea .searchPolicy .searchBox .searchInput {
+  width: 100%;
+  background: none;
+  border: 1px solid;
+  height: 30px;
+  border-color: rgba(0, 0, 0, 0.23);
+  padding: 0 10px;
+  color: #2b7a78;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.viewableArea .mainArea .searchPolicy .searchBox .searchInput:focus {
+  background: white;
+  outline: initial;
+}
+.viewableArea .viewClaimsHistory {
+  width: 80vw;
+  margin: 6% auto 0;
+  background: #ffffff;
+  padding: 5px;
+  position: relative;
+}
+.viewableArea .viewClaimsHistory .popUpHeader {
+  background: #17252a;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+.viewableArea .viewClaimsHistory .claimTable {
+  width: 98%;
+  margin: 10px auto 20px;
+  height: 50vh;
+  overflow-y: auto;
+}
+.viewableArea .requestPolicy {
+  padding: 5px;
+  width: 50vw;
+  margin: 10% auto 0;
+  background: #ffffff;
+  position: relative;
+}
+.viewableArea .requestPolicy .popUpHeader {
+  background: #17252a;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+.viewableArea .requestPolicy .popUpBody {
+  height: auto;
+  border: 2px solid #cecece;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+.viewableArea .requestPolicy .popUpBody .subHeader {
+  color: #4d4d4d;
+  font-size: 16px;
+}
+.viewableArea .requestPolicy .popUpBody .popUpSubmit {
+  min-width: 250px;
+  margin: 10px auto;
+  background: #3aafa9;
+  border-radius: 5px;
+  color: white;
+}
+.viewableArea .requestPolicy .popUpBody .popUpSubmit:hover {
+  background: #2b7a78;
+}
+.viewableArea .requestPolicy .popUpBody input {
+  padding: 10px;
+  color: #505050;
+  font-size: 14px;
+  font-weight: bold;
+}
+.viewableArea .requestPolicy .popUpBody input:focus {
+  border: inherit;
+}
+.viewableArea .viewLogoutConfirmation, .viewableArea .viewSubmitConfirmation {
+  padding: 5px;
+  width: 40vw;
+  margin: 10% auto 0;
+  background: #ffffff;
+  position: relative;
+}
+.viewableArea .viewLogoutConfirmation .logoutPopup, .viewableArea .viewSubmitConfirmation .logoutPopup {
+  width: 100%;
+}
+.viewableArea .viewLogoutConfirmation .logoutPopup .popUpHeader, .viewableArea .viewSubmitConfirmation .logoutPopup .popUpHeader {
+  background: #17252a;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+.viewableArea .viewLogoutConfirmation .logoutPopup .popUpBody, .viewableArea .viewSubmitConfirmation .logoutPopup .popUpBody {
+  width: 100%;
+  height: auto;
+  border: 2px solid #cecece;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+.viewableArea .viewLogoutConfirmation .logoutPopup .popUpBody .subHeader, .viewableArea .viewSubmitConfirmation .logoutPopup .popUpBody .subHeader {
+  color: #4d4d4d;
+  font-size: 16px;
+}
+.viewableArea .viewLogoutConfirmation .logoutPopup .popUpBody .popUpSubmit, .viewableArea .viewSubmitConfirmation .logoutPopup .popUpBody .popUpSubmit {
+  min-width: 200px;
+  margin: 10px auto;
+  background: #3aafa9;
+  border-radius: 5px;
+  color: white;
+}
+.viewableArea .viewLogoutConfirmation .logoutPopup .popUpBody .popUpSubmit:hover, .viewableArea .viewSubmitConfirmation .logoutPopup .popUpBody .popUpSubmit:hover {
+  background: #2b7a78;
+}
+.viewableArea .viewLogoutConfirmation .logoutPopup .popUpBody .popUpSubmit.cancel, .viewableArea .viewSubmitConfirmation .logoutPopup .popUpBody .popUpSubmit.cancel {
+  background: #f57167;
+}
+.viewableArea .viewLogoutConfirmation .logoutPopup .popUpBody .popUpSubmit.cancel:hover, .viewableArea .viewSubmitConfirmation .logoutPopup .popUpBody .popUpSubmit.cancel:hover {
+  background: #ce483f;
+}
+.viewableArea .viewSubmitConfirmation .popUpBody {
+  text-align: center;
+}
+.viewableArea .viewSubmitConfirmation .popUpBody i {
+  margin-top: 15px;
+  color: #43a047;
+  font-size: 40px;
+}
+.viewableArea .viewSubmitConfirmation .popUpBody .subHeader {
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.statBar {
+  height: 75px;
+  width: 100%;
+  margin-top: 5px;
+}
+.statBar .statParams .react-sweet-progress-symbol {
+  display: none;
+}
+.statBar .statParams .statSection {
+  margin-top: 5px;
+}
+.statBar .statParams .statSection .statTitle {
+  font-size: 12px;
+  color: #838383;
+  font-style: italic;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.statBar .statParams .statSection .statNumber {
+  color: #3aafa9;
+}
+.statBar .statParams .statSection .statSeperator {
+  color: #b6b6b6;
+}
+.statBar .statParams .statSection .statsTimeframe {
+  font-size: 12px;
+  color: #838383;
+  font-style: italic;
+  margin-top: 2px;
+}
+.statBar .statParams .statSection .statNumberValue {
+  font-size: 20px;
+  color: #3aafa9;
+  font-style: italic;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.customerInfo {
+  height: 100%;
+  overflow-y: auto;
+}
+.customerInfo .profilePicture {
+  height: 75px;
+  margin: auto;
+  text-align: center;
+}
+.customerInfo .profilePicture img {
+  height: 100%;
+}
+.customerInfo .basicInfo {
+  width: 100%;
+  padding-top: 10px;
+}
+.customerInfo .basicInfo .infoHeader .infoValue {
+  color: #3aafa9;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.customerInfo .basicInfo .infoDialog .infoTitle {
+  color: #3aafa9;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.customerInfo .basicInfo .infoDialog .infoValue {
+  color: #838383;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.customerInfo .basicInfo .claimHistory {
+  margin-top: 15px;
+  padding: 0 10px;
+  width: 100%;
+}
+.customerInfo .basicInfo .claimHistory .historyTitle {
+  color: #3aafa9;
+  font-weight: bold;
+}
+.customerInfo .basicInfo .claimHistory .claimSummary .summaryItem {
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+  text-align: center;
+}
+.customerInfo .basicInfo .claimHistory .claimSummary .summaryItem .summaryTitle {
+  font-size: 13px;
+  color: #17252a;
+  font-weight: bold;
+}
+.customerInfo .basicInfo .claimHistory .claimSummary .summaryItem .summaryValue {
+  font-size: 13px;
+  color: #17252a;
+  font-weight: bold;
+}
+.customerInfo .basicInfo .claimHistory .claimBox {
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.customerInfo .basicInfo .claimHistory .claimBox label {
+  margin-bottom: 5px;
+}
+.customerInfo .basicInfo .claimHistory .claimBox .claimBoxTitle .claimBoxTitleLabel {
+  font-size: 16px;
+  color: #838383;
+  font-weight: bold;
+}
+.customerInfo .basicInfo .claimHistory .claimBox .claimBoxTitle .claimBoxTitleValue {
+  font-size: 16px;
+  color: #3aafa9;
+  font-weight: bold;
+}
+.customerInfo .basicInfo .claimHistory .claimBox .claimBoxContent .claimBoxContentLabel {
+  font-size: 14px;
+  color: #838383;
+  font-weight: bold;
+}
+.customerInfo .basicInfo .claimHistory .claimBox .claimBoxContent .claimBoxContentValue {
+  font-size: 14px;
+  color: #3aafa9;
+  font-weight: bold;
+}
+.customerInfo .basicInfo .claimHistory .claimBox .claimBoxContent .claimBoxContentValue.accepted {
+  color: #8aff9e;
+}
+.customerInfo .basicInfo .claimHistory .claimBox .claimBoxContent .claimBoxContentValue.pending {
+  color: #f7e710;
+}
+.customerInfo .basicInfo .claimHistory .prevClaimsButton {
+  font-weight: bold;
+  color: #c4c4c4;
+}
+.customerInfo .basicInfo .claimHistory .pagination {
+  margin-bottom: 0;
+}
+.customerInfo .basicInfo .claimHistory .pagination .page-item .page-link {
+  padding: 5px;
+  color: #838383;
+  font-size: 12px;
+}
+.customerInfo .basicInfo .claimHistory .pagination .page-item.active .page-link {
+  padding: 5px;
+  background: #3aafa9;
+  color: #FFFFFF;
+  border-color: #3aafa9;
+}
+.customerInfo .basicInfo .claimHistory .pagination .page-item :focus {
+  box-shadow: none !important;
+}
+.customerInfo .basicInfo .otherVehicleTable {
+  color: #838383;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: bold;
+}
+.customerInfo .basicInfo .otherVehicleTable td {
+  padding: 5px 15px !important;
+}
+.customerInfo .basicInfo .otherVehicleTable_header {
+  padding: 5px 15px !important;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #505050;
+}
+
+.mainForm {
+  height: 100%;
+  padding: 5px 10px;
+}
+.mainForm .formButton {
+  float: right;
+  margin: 10px 0 0 0;
+}
+.mainForm .formTitle {
+  padding-top: 10px;
+}
+.mainForm .formTitle h5 {
+  color: #838383;
+  font-weight: bold;
+}
+.mainForm .formTitle .switch {
+  text-align: right;
+  margin-top: 2px;
+}
+.mainForm .formTitle .switch .switchLabelMain {
+  color: #505050 !important;
+}
+.mainForm .formTitle .switch .switchLabel {
+  font-size: 16px;
+  color: #838383;
+  font-style: italic;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.mainForm .formTitle .switch .help {
+  font-size: 14px;
+  color: #cecece;
+  margin-left: 10px;
+}
+.mainForm .formTitle .switch .MuiSwitch-switchBase-7, .mainForm .formTitle .switch .MuiSwitch-switchBase-8 {
+  height: auto;
+}
+.mainForm .newForm {
+  border: 1px solid #cecece;
+  padding: 10px 15px;
+  overflow-y: auto;
+}
+.mainForm .newForm .questionnaireBox {
+  border-left: 5px solid #3aafa9;
+  min-height: 60px;
+  margin-bottom: 15px;
+  padding: 2px 5px 10px 15px;
+}
+.mainForm .newForm .questionnaireBox .questionnaire {
+  color: #505050;
+  font-size: 18px;
+}
+.mainForm .newForm .questionnaireBox .passengerNumber {
+  width: 100%;
+  border: 1px solid #2b7a78;
+  border-radius: 5px;
+  padding: 5px 10px;
+  height: 34px;
+  color: #505050;
+  font-size: 14px;
+  font-style: italic;
+}
+.mainForm .newForm .questionnaireBox .activeNo {
+  border: 1px solid #2b7a78;
+  color: #505050;
+  font-size: 14px;
+  font-style: italic;
+  box-shadow: none;
+  padding: 5px 10px;
+  height: 34px;
+}
+.mainForm .newForm .questionnaireBox .activeYes {
+  background: #2b7a78;
+  color: white;
+  font-size: 14px;
+  font-style: italic;
+  box-shadow: none;
+  padding: 5px 10px;
+  height: 34px;
+}
+.mainForm .newForm .questionnaireBox .activeYes:focus {
+  box-shadow: none;
+}
+.mainForm .newForm .questionnaireBox .react-datepicker-wrapper {
+  width: 100%;
+}
+.mainForm .newForm .questionnaireBox .react-datepicker-wrapper .react-datepicker__input-container {
+  width: 100%;
+}
+.mainForm .newForm .questionnaireBox .react-datepicker-wrapper .react-datepicker__input-container .datePicker, .mainForm .newForm .questionnaireBox .react-datepicker-wrapper .react-datepicker__input-container .timePicker {
+  width: 100%;
+  border: 1px solid #2b7a78;
+  border-radius: 5px;
+  padding: 2px 5px;
+  color: #505050;
+  font-style: italic;
+  font-size: 14px;
+  height: 34px;
+}
+.mainForm .newForm .questionnaireBox .react-datepicker-popper {
+  width: 320px;
+}
+.mainForm .newForm .questionnaireBox .react-datepicker-popper .react-datepicker--time-only {
+  width: 100%;
+}
+.mainForm .newForm .questionnaireBox .react-datepicker-popper .react-datepicker--time-only .react-datepicker__time-container {
+  width: 100%;
+}
+.mainForm .newForm .questionnaireBox .react-datepicker-popper .react-datepicker--time-only .react-datepicker__time-container .react-datepicker__time-box {
+  width: 100%;
+}
+.mainForm .newForm .questionnaireBox .react-datepicker-popper .react-datepicker--time-only .react-datepicker__time-container .react-datepicker__time-box .react-datepicker__time-list {
+  width: 100%;
+}
+.mainForm .newForm .questionnaireBox .dropdown .dropdownControl__control {
+  border: 1px solid #2b7a78;
+  border-radius: 5px;
+}
+.mainForm .newForm .questionnaireBox .dropdown .dropdownControl__control .dropdownControl__dropdown-indicator {
+  padding: 0 !important;
+}
+.mainForm .newForm .questionnaireBox .dropdown .dropdownControl__control .dropdownControl__value-container {
+  padding: 0 5px !important;
+}
+.mainForm .newForm .questionnaireBox .dropdown .dropdownControl__control .dropdownControl__value-container .dropdownControl__single-value {
+  color: #505050;
+  font-style: italic;
+  font-size: 14px;
+  width: 100%;
+}
+.mainForm .newForm .questionnaireBox .dropdown.focus {
+  box-shadow: none !important;
+}
+.mainForm .submissionButtons {
+  width: 100%;
+  text-align: center;
+}
+.mainForm .submissionButtons button {
+  cursor: pointer;
+  background: #3aafa9;
+  width: 300px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+.mainForm .submissionButtons button:hover {
+  background: #2b7a78;
+}
+.mainForm .formNavigation {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+}
+.mainForm .formNavigation .navButton {
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  background: #2b7a78;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  border: none;
+  font-size: 25px;
+  margin-left: 5px;
+}
+.mainForm .formNavigation .navButton:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.mainForm .formNavigation .navButton.disabled {
+  background: #afafaf;
+  color: #c9c9c9;
+  cursor: not-allowed;
+}
+
+.snackBar .snackBarFraud > div {
+  background: #d32f2f !important;
+}
+.snackBar .snackBarValid > div {
+  background: #43a047 !important;
+}
+.snackBar .closeIcon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+* {
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  background-color: #EDEAE5 !important;
+  overflow: auto;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.centered {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: initial !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+.fixed {
+  position: fixed !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+}
+
+.borderless {
+  border: none !important;
+}
+
+.autoHeight {
+  height: auto !important;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.header {
+  background: #17252a;
+  border-bottom: 2px solid #3aafa9;
+}
+.header .title {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0 0 10px;
+}
+.header .actionItems i {
+  color: white;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.underlay {
+  z-index: 99999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+}
+.underlay .closePopUpIcon {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */
