@@ -1,4 +1,4 @@
-# Insurance Application - Sample App working on an AI-based ML Model
+nsurance Application - Sample App working on an AI-based ML Model
 
 # To run the application, do the following steps:
 
