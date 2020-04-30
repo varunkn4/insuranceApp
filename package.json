@@ -35,7 +35,7 @@
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.3.1",
     "file-loader": "^2.0.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "jqwidgets-scripts": "^7.2.0",
     "moment": "^2.24.0",
     "polyfill": "^0.1.0",
