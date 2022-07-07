@@ -37,7 +37,7 @@
     "file-loader": "^2.0.0",
     "jquery": "^3.3.1",
     "jqwidgets-scripts": "^7.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "polyfill": "^0.1.0",
     "popper.js": "^1.14.5",
     "prop-types": "^15.6.2",
